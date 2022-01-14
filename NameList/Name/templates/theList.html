@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    {% for name in user %}
+        <h1 class="text-muted">Welcome there {{ name.username }} Please answer the following question</h1>
+    {% endfor %}
+    <a href="{{url_for('deleteStage')}}" class="continue-btn">delete</a>
+{% endblock %}
